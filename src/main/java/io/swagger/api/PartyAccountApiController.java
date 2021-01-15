@@ -135,7 +135,7 @@ public class PartyAccountApiController implements PartyAccountApi {
             @ApiParam(value = "Identifier of the PartyAccount",required=true) @PathVariable("id") String id,
             @ApiParam(value = "Comma-separated properties to provide in response") @Valid @RequestParam(value = "fields", required = false) String fields
     ) {        
-        System.out.println("Start RetrievePartyAccount--------------------------");
+        System.out.println("---------------------Start RetrievePartyAccount--------------------------");
         Object response; 
         Integer statusCode = 200;
         try {
@@ -156,7 +156,7 @@ public class PartyAccountApiController implements PartyAccountApi {
         }
         
         System.out.println("Response: " + response);
-        System.out.println("End RetrievePartyAccount----------------------");
+        System.out.println("---------------End RetrievePartyAccount----------------------");
         return new ResponseEntity<>(response, HttpStatus.valueOf(statusCode));
     }
 
