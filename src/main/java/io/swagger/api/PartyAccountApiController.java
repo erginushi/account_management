@@ -41,7 +41,7 @@ public class PartyAccountApiController implements PartyAccountApi {
     public ResponseEntity<Object> createPartyAccount(
             @ApiParam(value = "The PartyAccount to be created" ,required=true )  @Valid @RequestBody PartyAccountCreate partyAccount
     ) {
-        System.out.println("Start CreatePartyAccount");
+        System.out.println("Start CreatePartyAccount--------------------");
         Object response; 
         Integer statusCode = 200;
         try {
@@ -62,7 +62,7 @@ public class PartyAccountApiController implements PartyAccountApi {
         }
         
         System.out.println("Response: " + response);
-        System.out.println("End CreatePartyAccount");
+        System.out.println("End CreatePartyAccount------------------------");
         return new ResponseEntity<>(response, HttpStatus.valueOf(statusCode));
     }
 
