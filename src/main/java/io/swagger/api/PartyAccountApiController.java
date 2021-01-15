@@ -139,7 +139,7 @@ public class PartyAccountApiController implements PartyAccountApi {
         Object response; 
         Integer statusCode = 200;
         try {
-            System.out.println("Request for RetrievePartyAccount: " + id);
+            System.out.println("-----------Request for RetrievePartyAccount: " + id);
             response = AccountManagementController.getAccount(id);
         } catch (CustomException e) {
             System.out.println("Custom Exception: " + e);
@@ -155,7 +155,7 @@ public class PartyAccountApiController implements PartyAccountApi {
             response = error;
         }
         
-        System.out.println("Response: " + response);
+        System.out.println("---------Response: " + response);
         System.out.println("End RetrievePartyAccount");
         return new ResponseEntity<>(response, HttpStatus.valueOf(statusCode));
     }
