@@ -139,7 +139,7 @@ public class PartyAccountApiController implements PartyAccountApi {
         Object response; 
         Integer statusCode = 200;
         try {
-            System.out.println("Request: " + id);
+            System.out.println("Request for RetrievePartyAccount: " + id);
             response = AccountManagementController.getAccount(id);
         } catch (CustomException e) {
             System.out.println("Custom Exception: " + e);
